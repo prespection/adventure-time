@@ -6,12 +6,16 @@ KillorNot = input ("Do you want to help your city's citizens kill the dragon? Y/
 
 if KillorNot == "Y":
     print ("Oh thank you so much! The dragon is hiding in a secret lair under the town hall. You'll need some equipment first before you can take it on")
-elif KillorNot == "N":
-    print ("Please help us kill the dragon, we really need you out there! We will compensate you greatly")
-KillorNot = input ("Do you want to help your city's citizens kill the dragon? Y/N ")
+else:
+    while KillorNot != "Y":
+        print ("\nPlease help us kill the dragon, we really need you out there! We will compensate you greatly")
+        KillorNot = input ("Do you want to help your city's citizens kill the dragon? Y/N")
+        if KillorNot != "N" and KillorNot != "Y":
+            print ("Please enter a valid input.")
+             
+        
+print ("Oh thank you so much! The dragon is hiding in a secret lair under the town hall. You'll need some equipment first before you can take it on")
 
-while KillorNot == "N":
-    print ("Please help us kill the dragon, we really need you out there! We will compensate you greatly")
-    KillorNot = input ("Do you want to help your city's citizens kill the dragon? Y/N ")
-    if KillorNot == "Y":
-            print ("Oh thank you so much! The dragon is hiding in a secret lair under the town hall. You'll need some equipment first before you can take it on")
+# elif KillorNot == "N":
+#     print ("Please help us kill the dragon, we really need you out there! We will compensate you greatly")
+#     KillorNot = input ("Do you want to help your city's citizens kill the dragon? Y/N ")
