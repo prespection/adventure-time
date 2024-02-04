@@ -134,6 +134,8 @@ if actionchoice1.lower() in Whichaction:
     print("\nWE DID IT!!! WE SLAYED THE DRAGON! THANK YOU SO MUCH WARRIOR")
     time.sleep(3)
     print("\nCongratulations! You beat adventure time, you are a true warrior")
+    time.sleep(2)
+    input("Press enter to exit;")
 elif actionchoice2.lower() in Whichaction:
     print("\nYou're right... There is no way we can kill this dragon when we're this hurt... we have to run")
     time.sleep(3)
@@ -142,3 +144,5 @@ elif actionchoice2.lower() in Whichaction:
     print("\nWe'll come back to fight another time... The dragon is too strong for us right now...")
     time.sleep(3)
     print("\nGAME OVER....")
+    time.sleep(2)
+    input("Press enter to exit;")
