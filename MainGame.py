@@ -15,7 +15,7 @@ print("Hello " + Username + ", I'm so glad that you're here! There is a dragon w
       "Can you please help us kill it?")
 KillorNot = input("Do you want to help your city's citizens kill the dragon? Y/N: ")
 
-if KillorNot == "Y":
+if KillorNot.upper() == "Y" or KillorNot.upper() == "YES":
     print("Oh thank you so much! The dragon is hiding in a secret lair under the town hall. You'll need some equipment "
           "first before you can take it on")
     time.sleep(2)
@@ -23,8 +23,8 @@ if KillorNot == "Y":
     time.sleep(2)
     Weapon = input("\nI've got a fork, a spoon, and a sword... Which one would you like to fight the dragon? or... do you want them all? ")
 else:
-    while KillorNot != "Y":
-        if KillorNot != "N" and KillorNot != "Y":
+    while KillorNot.upper() != "Y" and KillorNot.upper() != "YES":
+        if KillorNot.upper() != "N" and KillorNot.upper() != "Y" and KillorNot.upper() != "NO" and KillorNot.upper() != "YES":
             print("Please enter a valid input.")
         print("\nPlease help us kill the dragon, we really need you out there! We will compensate you greatly")
         KillorNot = input("Do you want to help your city's citizens kill the dragon? Y/N: ")
@@ -39,8 +39,8 @@ else:
     time.sleep(1)
 
 WhichWeapon = Weapon.lower()  
-while not (weaponchoice1 in WhichWeapon or weaponchoice2 in WhichWeapon or weaponchoice3 in WhichWeapon or weaponchoice4 in WhichWeapon):
-    print("You need to select a weapon, we cannot do empty handed!")
+while not (weaponchoice1 in WhichWeapon or weaponchoice2 in WhichWeapon or weaponchoice3 in WhichWeapon or weaponchoice4 in WhichWeapon or weaponchoice5 in WhichWeapon):
+    print("You need to select a weapon, we cannot go empty handed!")
     time.sleep(1)
     Weapon = input ("Do you want a fork, a spoon, a sword or everything?")
     WhichWeapon = Weapon.lower()
@@ -86,7 +86,7 @@ print("Dragon's Health: " + str(DragonHP))
 
 Action1 = input("\nDo you want to attack the dragon? Y or N: ") 
 
-if Action1 == "Y":
+if Action1.upper() == "Y" or Action1.upper() == "YES":
     print("\nLETS ATTACK!!!!")
     time.sleep(2)
     print("\nWOW THAT WAS A SOLID STRIKE WARRIOR... I THINK YOU HURT IT")
@@ -98,8 +98,8 @@ if Action1 == "Y":
     print ("\n*The dragon awaken and swipes his tail knocking you and your friends down*")
     time.sleep(2)
 else:
-    while Action1 != "Y":
-        if Action1 != "N" and Action1 != "Y":
+    while Action1 != "Y" and Action1 != "YES":
+        if Action1 != "N" and Action1 != "Y" and Action1 != "NO" and Action1 != "YES":
             print ("\nPlease enter a valid input.")
         print ("\nThe dragon is sleeping this is our best chance to attack!")
         Action1 = input("\nDo you want to attack the dragon? Y or N: ") 
